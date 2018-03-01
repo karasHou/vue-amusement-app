@@ -1,13 +1,34 @@
 <template>
-  <h1>footer</h1>
+<ul class="footer">
+  <li>电影</li>
+  <li>音乐</li>
+  <li>书籍</li>
+  <li>图片</li>
+</ul>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style scoped>
+.footer {
+  height: 1rem;
+  background: rgb(33, 150, 243);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  line-height: 1rem;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.footer li{
+  flex-grow: 1;
+  text-align: center;
+  color: #fff;
+}
 
 </style>

@@ -4,6 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+//在main.js中导入的文件全局都可以用到
+import  './assets/css/reset.css'
+import  './assets/js/rem.js';
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

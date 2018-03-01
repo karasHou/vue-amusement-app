@@ -1,7 +1,7 @@
 <template>
   <div>
     <common-header></common-header>
-    movie123
+      <router-view></router-view>
     <common-footer></common-footer>
   </div>
 </template>
