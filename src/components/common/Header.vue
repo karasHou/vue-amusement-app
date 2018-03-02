@@ -1,12 +1,19 @@
 <template>
   <div class="header">
-    <button class="home">首页</button>
+    <span class="home" @click="goHome">首页</span>
     <h2 class="title">Movie</h2>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+        //返回首页
+        goHome(){
+            this.$router.push('/');
+        }
+    },
+};
 </script>
 
 <style scoped>
@@ -26,6 +33,7 @@ export default {};
   border: none;
   color: #fff;
   margin-left: 0.1rem;
+  text-decoration: none;
 }
 
 .title {

@@ -24,7 +24,8 @@ export default new Router({
           component: MovieList
         },
         {
-          path: "movieDetail",
+          // 配置url传参
+          path: "movieDetail/:movieId",
           component: MovieDetail
         }
       ]

@@ -1,7 +1,7 @@
 <template>
 <div class="movie-list">
   <ul>
-    <li v-for="(movie,index) in movieList" :key="index" class="movie">
+    <li @click="goDetail(movie.id)" v-for="(movie,index) in movieList" :key="index" class="movie">
       <div class="movie-img">
           <!-- 注意src动态属性 -->
           <img :src="movie.img" alt="">
@@ -33,7 +33,9 @@ export default {
     return {
       movieList: [],
       loadingShow: true,
-      tip: false
+      tip: false,
+      //缓存当前的获取值
+      cache: []
     };
   },
   //钩子函数，模板编译挂载之后
@@ -78,12 +80,17 @@ export default {
       Axios.get(url)
         .then(res => {
           //请求成功，进度条消失
-          console.log(res);
           this.loadingShow = false;
           //每次请求后都连接到其后面
-          this.movieList = this.movieList.concat(res.data.data.movies);
+          this.cache = res.data.data.movies;
+          this.movieList = this.movieList.concat(this.cache);
         })
         .catch(() => {});
+    },
+    goDetail(movieId) {
+      console.log(movieId);
+      //url传参
+      this.$router.push("/movie/movieDetail/" + movieId);
     }
   }
 };
@@ -113,6 +120,8 @@ export default {
 }
 .movie-name {
   font-weight: bolder;
+  margin-bottom: 0.1rem;
+  font-size: 0.3rem;
 }
 
 .loading {
@@ -120,5 +129,6 @@ export default {
 }
 .tip {
   text-align: center;
+  color: slategrey;
 }
 </style>
