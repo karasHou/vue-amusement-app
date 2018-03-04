@@ -2,7 +2,7 @@
   <div class="header" :style="{background:bg}">
     <span class="home" @click="goHome">首页</span>
     <h2 class="title">
-          <!-- 插槽 -->
+          <!-- 插槽，如果没有值就使用默认值 -->
           <slot name="title">默认值</slot>
     </h2>
   </div>
@@ -11,8 +11,8 @@
 <script>
 export default {
   methods: {
-    //返回首页
     goHome() {
+    //返回首页
       this.$router.push("/");
     }
   },
@@ -34,7 +34,6 @@ export default {
 }
 
 .home {
-  /* background: rgb(33, 150, 243); */
   border: none;
   color: #fff;
   margin-left: 0.2rem;
