@@ -52,7 +52,8 @@ export default {
       //整个内容的高度（固定）
       let scrollHeight = document.documentElement.scrollHeight;
       //判断滚动到底
-      if (clientHeight + scrollTop == scrollHeight) {
+      if (clientHeight + scrollTop + 5 == scrollHeight) {
+        console.log("到底了");
         //展示提示信息
         this.loadingShow = true;
         if (!this.tip) {

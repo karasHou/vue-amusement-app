@@ -1,18 +1,23 @@
 <template>
-  <div class="header">
+  <div class="header" :style="{background:bg}">
     <span class="home" @click="goHome">首页</span>
-    <h2 class="title">Movie</h2>
+    <h2 class="title">
+          <!-- 插槽 -->
+          <slot name="title">默认值</slot>
+    </h2>
   </div>
 </template>
 
 <script>
 export default {
   methods: {
-        //返回首页
-        goHome(){
-            this.$router.push('/');
-        }
-    },
+    //返回首页
+    goHome() {
+      this.$router.push("/");
+    }
+  },
+  //监听父组件的参数
+  props: ["bg"]
 };
 </script>
 
@@ -29,10 +34,10 @@ export default {
 }
 
 .home {
-  background: rgb(33, 150, 243);
+  /* background: rgb(33, 150, 243); */
   border: none;
   color: #fff;
-  margin-left: 0.1rem;
+  margin-left: 0.2rem;
   text-decoration: none;
 }
 
