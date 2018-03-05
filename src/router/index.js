@@ -6,6 +6,8 @@ import MovieDetail from "@/components/movie/MovieDetail";
 import Music from "@/components/music/Music";
 import Book from "@/components/book/Book";
 import Photo from "@/components/photo/Photo";
+import PhotoList from "@/components/photo/PhotoList";
+import PhotoDetail from "@/components/photo/PhotoDetail";
 import MusicList from "@/components/music/MusicList";
 import MusicAlbums from "@/components/music/MusicAlbums";
 
@@ -13,7 +15,8 @@ Vue.use(Router);
 
 export default new Router({
   // mode: 'history',
-  routes: [{
+  routes: [
+    {
       // 默认进入首页
       path: "/",
       redirect: "/movie/movieList"
@@ -22,7 +25,8 @@ export default new Router({
       path: "/movie",
       component: Movie,
       // 配置子路由
-      children: [{
+      children: [
+        {
           path: "movieList",
           component: MovieList
         },
@@ -36,16 +40,19 @@ export default new Router({
     {
       path: "/music",
       component: Music,
-      redirect: '/music/musicList',
+      redirect: "/music/musicList",
       //配置子路由
-      children: [{
-        path: 'musicList',
-        component: MusicList
-      }, {
-        //配置url传参
-        path: 'musicAlbums/:musicId',
-        component: MusicAlbums
-      }]
+      children: [
+        {
+          path: "musicList",
+          component: MusicList
+        },
+        {
+          //配置url传参
+          path: "musicAlbums/:musicId",
+          component: MusicAlbums
+        }
+      ]
     },
     {
       path: "/book",
@@ -53,7 +60,18 @@ export default new Router({
     },
     {
       path: "/photo",
-      component: Photo
+      component: Photo,
+      redirect: '/photo/photoList',
+      children: [
+        {
+          path: "photoDetail",
+          component: PhotoDetail
+        },
+        {
+          path: "photoList",
+          component: PhotoList
+        }
+      ]
     }
   ]
 });
