@@ -75,7 +75,7 @@ export default {
 
     Axios.get(url2).then(res => {
       this.comments = res.data.data.CommentResponseModel.cmts;
-      console.log(this.comments);
+      // console.log(this.comments);
 
       for (let i = 0; i < this.comments.length; i++) {
         if (this.comments[i].avatarurl == "") {
