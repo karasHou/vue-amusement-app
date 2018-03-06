@@ -15,12 +15,12 @@
         </div>
     </li>
   </ul>
-  <div class="loading" v-show="loadingShow">
+  <!-- <div class="loading" v-show="loadingShow">
     <img src="../../assets/img/loading.gif" alt="">
   </div>
   <div class="tip" v-show="tip">
     <h4>人家是有底线的</h4>
-  </div>
+  </div> -->
 </div>
 </template>
 
@@ -52,7 +52,7 @@ export default {
       //整个内容的高度（固定）
       let scrollHeight = document.documentElement.scrollHeight;
       //判断滚动到底
-      if (clientHeight + scrollTop + 5 == scrollHeight) {
+      if (clientHeight + scrollTop == scrollHeight) {
         console.log("到底了");
         //展示提示信息
         this.loadingShow = true;
