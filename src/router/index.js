@@ -64,7 +64,7 @@ export default new Router({
       redirect: '/photo/photoList',
       children: [
         {
-          path: "photoDetail",
+          path: "photoDetail/:index",
           component: PhotoDetail
         },
         {
