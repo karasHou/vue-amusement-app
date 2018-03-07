@@ -31,7 +31,7 @@
 
 ### 书籍
 轮播图循环展示三本书，使用插件vue-swipe。
-![音乐](https://github.com/Houweix/vue-app/raw/master/show/music.png)
+![音乐](https://github.com/Houweix/vue-app/raw/master/show/book.png)
 
 ### 图片
 使用插件v-touch来管理移动端的触摸事件。左右滑动可以切换图片。
