@@ -5,7 +5,7 @@
 
 一个使用真实数据制作的包含电影热映，音乐播放，图片展示的综合app，使用vue-cli以及一些常用插件开发。
 
-![](https://github.com/Houweix/vueapp/raw/master/show/show.gif)
+![](https://github.com/Houweix/vue-app/raw/master/show/show.gif)
 [在线预览](http://www.ihouwei.com/vueapp)
 
 ## 开发背景
@@ -23,19 +23,19 @@
 ## 界面 & 功能
 ### 首页（电影列表）
 使用Axios，通过从豆瓣API获取的热映电影的相关数据，可以点击喜欢的电影查看详情
-![首页](https://github.com/Houweix/vueapp/raw/master/show/movie.png)
+![首页](https://github.com/Houweix/vue-app/raw/master/show/movie.png)
 
 ### 音乐
 使用插件vue-aplayer,点击进入音乐播放器可以播放音乐以及歌词的展示。
-![音乐](https://github.com/Houweix/vueapp/raw/master/show/music.png)
+![音乐](https://github.com/Houweix/vue-app/raw/master/show/music.png)
 
 ### 书籍
 轮播图循环展示三本书，使用插件vue-swipe。
-![音乐](https://github.com/Houweix/vueapp/raw/master/show/music.png)
+![音乐](https://github.com/Houweix/vue-app/raw/master/show/music.png)
 
 ### 图片
 使用插件v-touch来管理移动端的触摸事件。左右滑动可以切换图片。
-![图片](https://github.com/Houweix/vueapp/raw/master/show/Photo.png)
+![图片](https://github.com/Houweix/vue-app/raw/master/show/Photo.png)
 
 ## 相关要点
 ### Vuex
