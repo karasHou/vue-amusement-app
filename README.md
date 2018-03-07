@@ -3,7 +3,7 @@
 一个使用真实数据制作的包含电影热映，音乐播放，图片展示的综合app，使用vue-cli以及一些常用插件开发。
 
 ![](https://github.com/Houweix/vue-app/raw/master/show/show.gif)
-[在线预览](http://www.ihouwei.com/vueapp)
+[在线预览(请使用移动端)](http://www.ihouwei.com/vueapp)
 
 ## 开发背景
 >vue-cli，一个官方命令行工具，可用于快速搭建大型单页应用。该工具为现代化的前端开发工作流提供了开箱即用的构建配置。只需几分钟即可创建并启动一个带热重载、保存时静态检查以及可用于生产环境的构建配置的项目。
@@ -36,3 +36,14 @@
 
 ## 相关要点
 ### Vuex
+>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。
+
+引入vuex状态管理，将共享的数据放在vuex中。在main.js中配置，全部其他的组件都可以使用。
+#### 数据的存储
+```javascript
+this.$store.dispatch('setPhotoList', res.data.photoData);
+```
+#### 数据的读取
+```javascript
+this.$store.state.photoList[this.nowIndex].src
+```
