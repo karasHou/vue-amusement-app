@@ -47,3 +47,6 @@ this.$store.dispatch('setPhotoList', res.data.photoData);
 ```javascript
 this.$store.state.photoList[this.nowIndex].src
 ```
+### vue父子组件通信
+>在 Vue 中，父子组件的关系可以总结为 prop 向下传递，事件向上传递。父组件通过 prop 给子组件下发数据，子组件通过事件给父组件发送消息。
+![图片](https://cn.vuejs.org/images/props-events.png)
