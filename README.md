@@ -1,6 +1,3 @@
-[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]()
-
-
 ## vue-app
 
 一个使用真实数据制作的包含电影热映，音乐播放，图片展示的综合app，使用vue-cli以及一些常用插件开发。
