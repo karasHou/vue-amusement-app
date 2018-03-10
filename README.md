@@ -47,6 +47,30 @@ this.$store.dispatch('setPhotoList', res.data.photoData);
 ```javascript
 this.$store.state.photoList[this.nowIndex].src
 ```
+
+### vue-router
+每个模块都是由几个不同的组件构成，每次切换的其实是<router-view>中的内容<br>
+子路由的配置：<br>
+```javascript
+{
+      path: "/movie",
+      component: Movie,
+      // 配置子路由
+      children: [{
+          path: "movieList",
+          component: MovieList
+        },
+        {
+          // 配置url传参
+          path: "movieDetail/:movieId",
+          component: MovieDetail
+        }
+      ]
+    },
+```
+
+
+
 ### vue父子组件通信
 >在 Vue 中，父子组件的关系可以总结为 prop 向下传递，事件向上传递。父组件通过 prop 给子组件下发数据，子组件通过事件给父组件发送消息。
 #### 父->子
