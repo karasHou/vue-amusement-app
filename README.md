@@ -92,17 +92,10 @@ export default {
 1. 使用插件vue-aplayer时，组件请求的字段和请求到数据的字段不一致
 <br>
 解决：使用一个新数组存在data中，然后foreach改变字段名称。
-<br>
+<br><br>
 
 2. 渲染aplayer插件时数据还没有请求成功
 <br>
 解决：使用指令v-if，没有请求成功时不渲染dom，只有请求数据成功后才渲染插件。
 <br>
 
-3. 图片作为背景的显示问题
-<br>
-使用background集合属性的写法：
-<br>
-```javascript
-  background: #000 url(${this.$store.state.photoList[this.nowIndex].src}) no-repeat center/contain;
-```
