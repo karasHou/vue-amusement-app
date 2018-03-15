@@ -91,6 +91,17 @@ export default {
 
 1. 使用插件vue-aplayer时，组件请求的字段和请求到数据的字段不一致<br>
 解决：使用一个新数组存在data中，然后foreach改变字段名称。
+```javascript
+list.forEach(element => {
+          this.songs.push({
+            title: element.title,
+            author: element.author,
+            url: element.src,
+            pic: element.musicImgSrc,
+            lrc: '/static/' + element.lrc
+          });
+        });
+```
 <br><br>
 
 2. 渲染aplayer插件时数据还没有请求成功<br>
