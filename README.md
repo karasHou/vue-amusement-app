@@ -104,5 +104,5 @@ export default {
 使用background集合属性的写法：
 <br>
 ```javascript
-background: `#000 url(${this.$store.state.photoList[this.nowIndex].src}) no-repeat center/contain`;
+  background: #000 url(${this.$store.state.photoList[this.nowIndex].src}) no-repeat center/contain;
 ```
